@@ -253,6 +253,38 @@ footer a:hover {
     color: #FFFFFF;
 }
 
+/* Tombol Open Maps */
+.open-maps-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #FF0000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.open-maps-btn:hover {
+    background: #FF0000;
+    color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsif untuk tombol */
+@media (max-width: 480px) {
+    .open-maps-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
 /* ================== RESPONSIVE ================== */
 
 @media (max-width: 1024px) {
