@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Seblak Bu Imah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" data-aos="fade-down" data-aos-duration="800">Warung Seblak Bu Imah</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#team">Tim</a></li>
+                <li><a href="#kitchen">Dapur</a></li>
+                <li><a href="#location">Lokasi</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <img src="https://media.istockphoto.com/id/603267744/photo/tapas-food.jpg?s=612x612&w=0&k=20&c=kHdCs_6B9YizzPkuynSpgJnTf8m37xsAQ6czvu0cXBU=" alt="Hero Seblak Banner">
+        <div class="hero-text">
+            <h1 data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                Rasakan Pedasnya Seblak Autentik!
+            </h1>
+            <p data-aos="slide-up" data-aos-duration="900" data-aos-delay="500">
+                Warung Seblak Bu Imah: Tempatnya cita rasa Bandung yang modern dan berkelas.
+            </p>
+            <button class="cta-btn" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="800">
+                Pesan Sekarang
+            </button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container" data-aos="fade-up">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-delay="100">Tentang Kami</h2>
+        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            Warung Seblak Bu Imah adalah destinasi utama untuk menikmati seblak autentik ala Bandung dengan sentuhan modern. Kami menggunakan bahan segar berkualitas tinggi, resep turun-temurun, dan teknik memasak inovatif untuk menghadirkan rasa pedas yang menggugah selera. Seperti restoran berkelas, kami fokus pada pengalaman pelanggan yang nyaman dan stylish – dari suasana hingga penyajian. Bergabunglah dengan ribuan pelanggan puas yang telah merasakan kelezatan seblak kami!
+        </p>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section container">
+        <h2 data-aos="fade-down" data-aos-duration="700">Menu Unggulan Kami</h2>
+        <div class="menu-grid">
+            <div class="menu-item" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="100">
+                <img src="https://myaromakitchen.wordpress.com/wp-content/uploads/2020/03/dsc04523_fotor.jpg?w=2000&h=1500&crop=1" alt="Seblak Original">
+                <h3>Seblak Original</h3>
+                <p>Seblak klasik dengan kerupuk basah, telur, dan bumbu pedas khas Bandung.</p>
+                <span class="price">Rp 25.000</span>
+            </div>
+            <div class="menu-item" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="250">
+                <img src="https://www.shutterstock.com/image-photo/delicious-seblak-frying-pan-spicy-260nw-2296030605.jpg" alt="Seblak Seafood">
+                <h3>Seblak Seafood</h3>
+                <p>Tambahan udang dan cumi segar untuk sensasi laut yang pedas dan gurih.</p>
+                <span class="price">Rp 35.000</span>
+            </div>
+            <div class="menu-item" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="400">
+                <img src="asset/seblakspesial.jpg" alt="Seblak Special">
+                <h3>Seblak Special</h3>
+                <p>Kombinasi lengkap dengan sosis, bakso, dan sayuran segar.</p>
+                <span class="price">Rp 30.000</span>
+            </div>
+            <div class="menu-item" data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="550">
+                <img src="https://mywowtravel.com/assets/img/upload/gayatri/4b47258ece59fa36d3aa65a2ef1afdc6.jpg" alt="Seblak Vegetarian">
+                <h3>Seblak Vegetarian</h3>
+                <p>Varian sehat dengan jamur, tahu, dan sayuran organik.</p>
+                <span class="price">Rp 22.000</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section container">
+        <h2 data-aos="fade-down" data-aos-duration="700">Tim Kami</h2>
+        <div class="team-grid">
+            <div class="team-member" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+                <img src="asset/bu-imah.jpg" alt="Bu Imah">
+                <h3>Bu Imah</h3>
+                <p>Founder & Head Chef – Ahli resep tradisional dengan pengalaman 20 tahun.</p>
+            </div>
+            <div class="team-member" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                <img src="asset/chef-ahmad.jpg" alt="Chef Ahmad">
+                <h3>Chef Ahmad</h3>
+                <p>Sous Chef – Spesialis inovasi rasa pedas modern.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KITCHEN -->
+    <section id="kitchen" class="section container" data-aos="fade-up">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-delay="100">Dapur Kami</h2>
+        <img src="asset/dapur.jpg" alt="Dapur Modern" class="kitchen-img" 
+             data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            Dapur kami dirancang dengan standar internasional: higienis, efisien, dan dilengkapi peralatan canggih. Setiap hidangan disiapkan dengan cinta dan presisi untuk menjamin kualitas terbaik, seperti di restoran bintang lima.
+        </p>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section container">
+        <h2 data-aos="fade-down" data-aos-duration="700">Temukan Kami</h2>
+        <div id="map" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            Jl. Raya Bandung No. 123, Bandung, Jawa Barat. Buka setiap hari pukul 10:00 - 22:00.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer data-aos="fade-up" data-aos-duration="800">
+        <div class="container">
+            <p>© 2025 Warung Seblak Bu Imah. All Rights Reserved.</p>
+            <div class="social">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 120
+        });
+    </script>
+</body>
+</html>
