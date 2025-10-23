@@ -10,8 +10,8 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    overflow-x: hidden; /* FIX: Mencegah overflow horizontal/offside pada mobile */
-    text-size-adjust: 100%; /* FIX: Mencegah font boosting yang menyebabkan zoom in otomatis pada mobile */
+    overflow-x: hidden;
+    text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .content-container {
-    padding-top: 60px; /* FIX: Dipindah dari body untuk konsistensi dalam container */
+    padding-top: 60px;
 }
 
 header {
@@ -84,7 +84,7 @@ nav {
 
 .hero {
     position: relative;
-    height: calc(100svh - 60px); /* FIX: Ganti vh ke svh untuk hindari offset viewport mobile */
+    height: calc(100svh - 60px);
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -148,6 +148,19 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #FF0000;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: #FF0000;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
 }
 
 .menu-grid {
@@ -223,17 +236,17 @@ nav {
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    aspect-ratio: 16 / 9; /* FIX: Reservasi ruang gambar untuk hindari shift saat load */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
 #map {
-    width: 100%; /* FIX: Eksplisit width untuk mencegah overflow dari Leaflet pada mobile */
+    width: 100%;
     height: 400px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    touch-action: manipulation; /* FIX: Optimize touch events tanpa delay untuk Leaflet di mobile */
+    touch-action: manipulation;
 }
 
 footer {
@@ -241,6 +254,15 @@ footer {
     color: #FFFFFF;
     padding: 20px 0;
     text-align: center;
+}
+
+footer.faq-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 900; /* Below header but above content */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 footer a {
@@ -251,6 +273,11 @@ footer a {
 
 footer a:hover {
     color: #FFFFFF;
+}
+
+/* Adjust main content to avoid overlap with fixed footer on FAQ page */
+main.faq-main {
+    padding-top: 120px; /* Adjust for header (60px) + footer height (approx 60px) */
 }
 
 /* Tombol Open Maps */
@@ -277,16 +304,107 @@ footer a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsif untuk tombol */
-@media (max-width: 480px) {
-    .open-maps-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* ================== RESPONSIVE ================== */
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
+.contact-form button {
+    align-self: center;
+}
+
+/* Carousel for Gallery */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,0,0,0.7);
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #FFD700;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background: #FF0000;
+    color: #FFF;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #FFD700;
+    color: #FF0000;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .hero-text h1 {
         font-size: 3rem;
@@ -334,7 +452,7 @@ footer a:hover {
     }
 
     .hero {
-        height: calc(100svh - 60px); /* FIX: Ganti vh ke svh untuk mobile */
+        height: calc(100svh - 60px);
         min-height: 400px;
     }
 
@@ -350,8 +468,8 @@ footer a:hover {
         padding: 60px 0;
     }
 
-    .menu-grid, .team-grid {
-        grid-template-columns: 1fr;
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #map {
@@ -366,5 +484,32 @@ footer a:hover {
     .cta-btn {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .menu-item {
+        padding: 10px;
+    }
+    .menu-item img {
+        height: 120px;
+    }
+    .menu-item h3 {
+        font-size: 1.2rem;
+        margin: 10px 0 5px;
+    }
+    .menu-item p {
+        font-size: 0.8rem;
+        padding: 0 10px;
+        line-height: 1.4;
+    }
+    .price {
+        font-size: 1rem;
+        margin: 5px 0 10px;
+    }
+    .category-title {
+        font-size: 1.5rem;
+        padding-bottom: 8px;
     }
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gallery - Warung Seblak Bu Imah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" data-aos="fade-down" data-aos-duration="800">Warung Seblak Bu Imah</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="all-menus.html">Menus</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <section class="section container">
+            <h2 data-aos="fade-down" data-aos-duration="700">Galeri Kami</h2>
+            <div class="carousel" data-aos="fade-up" data-aos-duration="800">
+                <div class="carousel-inner">
+                    <img src="https://www.shutterstock.com/image-photo/bowl-seblak-various-types-toppings-600w-2396445051.jpg" alt="Seblak 1" class="active">
+                    <img src="https://thumbs.dreamstime.com/b/authentic-indonesian-seblak-rich-broth-vibrant-spicy-indonesian-dish-called-seblak-featuring-crackers-noodles-396841874.jpg" alt="Seblak 2">
+                    <img src="https://thumbs.dreamstime.com/b/seblak-indonesian-food-typical-sundanese-dish-originating-parahyangan-region-savory-spicy-taste-made-284990879.jpg" alt="Seblak 3">
+                    <img src="https://thumbs.dreamstime.com/b/spicy-savory-indonesian-seblak-dish-vibrant-called-featuring-crackers-noodles-meatballs-rich-flavorful-broth-396841908.jpg" alt="Seblak 4">
+                    <img src="asset/dapur.jpg" alt="Dapur">
+                </div>
+                <button class="carousel-prev">&lt;</button>
+                <button class="carousel-next">&gt;</button>
+            </div>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Nikmati galeri foto hidangan pedas kami dan suasana warung yang nyaman.</p>
+        </section>
+        
+        <footer data-aos="fade-up" data-aos-duration="800">
+            <div class="container">
+                <p>© 2025 Warung Seblak Bu Imah. All Rights Reserved.</p>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a> |
+                    <a href="https://web.whatsapp.com" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 120
+        });
+    </script>
+</body>
+</html>
